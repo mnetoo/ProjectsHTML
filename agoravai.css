@@ -1,0 +1,134 @@
+*
+{
+    margin: 0;
+}
+
+body 
+{
+    margin: 0; /* Remove margens padrão do body */
+    height: 100vh; /* Define a altura do body para ocupar toda a altura da tela */
+    justify-content: flex-start; /* Alinha os itens ao início do eixo horizontal */
+    align-items: flex-start; /* Alinha os itens ao início do eixo vertical */
+    background-image: url('https://wallpapercat.com/w/full/9/5/a/945731-3840x2160-desktop-4k-matte-black-wallpaper-image.jpg');
+}
+
+nav
+{
+    padding: 10px;
+    background-color: rgb(210, 212, 215);
+    text-align: right;
+    height: 35px;
+    margin: 10px;
+}
+
+nav a
+{
+    text-decoration: none;
+    color: black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
+    padding: 10px; /* Adiciona espaçamento ao redor do texto */
+}
+
+nav img
+{
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+header
+{
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    margin: 10px;
+    color: lightgray;
+}
+
+main
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    text-align: center;
+    column-gap: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.container
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 400px;
+    background-color: lightgrey;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.container article
+{
+    padding: 10px;
+
+}
+
+footer
+{
+    padding: 10px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: lightgray;
+    margin-top: 10px;
+}
+
+.ic
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    text-align: center;
+    column-gap: 20px;
+    padding: 10px;
+    margin: 10px;
+    row-gap: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: lightgray;
+    border-radius: 20px;
+}
+
+.forms
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    text-align: center;
+    column-gap: 10px;
+    padding: 10px;
+    margin: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: lightgray;
+    border-radius: 20px;
+    
+}
+
+#nome
+{
+    width: 300px;
+    margin: 5px;
+    
+}
+#email
+{
+    width: 300px;
+    margin: 5px
+}
+#telefone
+{
+    width: 300px;
+    margin: 5px
+}
+#curso
+{
+    width: 300px;
+    margin: 5px
+
+}
