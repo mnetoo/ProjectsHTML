@@ -1,0 +1,124 @@
+body {
+    color: #333333;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    position: relative;
+}
+
+/* Sacola de compras no cabeçalho */
+.status-sacola {
+    background-image: url(../img/sacola.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    font-size: 14px;
+    padding-right: 35px;
+    text-align: right;
+    width: 140px;
+    padding-top: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Navegação principal */
+.navegacao-principal {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.lista-navegacao {
+    font-size: 15px;
+    list-style: none;
+}
+
+.lista-navegacao li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.lista-navegacao a {
+    color: #003366;
+    text-decoration: none;
+}
+
+/* Container principal */
+.container {
+    margin: 0 auto;
+    width: 940px;
+}
+
+/* Seção de busca */
+.secao-busca {
+    background-color: #DCDCDC;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 10px;
+    width: 260px;
+}
+
+.secao-busca h2, 
+.formulario-busca {
+    margin: 10px;
+}
+
+.campo-busca {
+    width: 170px;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+.botao-busca {
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: #333333;
+    color: white;
+    border: none;
+}
+
+.formulario-busca {
+    display: flex;
+    align-items: center;
+}
+
+/* Seção de departamentos */
+.secao-departamentos {
+    background-color: #DCDCDC;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 10px;
+    width: 260px;
+}
+
+.secao-departamentos h2 {
+    margin: 10px;
+}
+
+.lista-departamentos {
+    float: left;
+}
+
+.lista-departamentos li {
+    background-color: white;
+    margin-bottom: 1px;
+    padding: 5px 10px;
+}
+
+.lista-departamentos a {
+    color: #333333;
+    text-decoration: none;
+}
+
+/* Navegação de departamentos */
+.navegacao-departamentos {
+    clear: left;
+}
+
+.banner-destaque
+{
+    float: right;
+    
+}
