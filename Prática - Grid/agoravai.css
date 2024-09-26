@@ -1,78 +1,92 @@
-*
-{
+* {
     margin: 0;
+    padding: 0; /* Adiciona padding 0 para garantir que não haja espaços indesejados */
+    box-sizing: border-box; /* Adiciona box-sizing para um melhor controle de padding e border */
+    color: black;
 }
 
-body 
-{
-    margin: 0; /* Remove margens padrão do body */
+body {
     height: 100vh; /* Define a altura do body para ocupar toda a altura da tela */
-    justify-content: flex-start; /* Alinha os itens ao início do eixo horizontal */
-    align-items: flex-start; /* Alinha os itens ao início do eixo vertical */
+    display: flex; /* Adiciona flexbox para centralizar o conteúdo */
+    flex-direction: column; /* Alinha os itens verticalmente */
+    justify-content: flex-start; /* Alinha os itens ao início do eixo vertical */
+    align-items: stretch; /* Alinha os itens para ocupar toda a largura */
     background-image: url('https://wallpapercat.com/w/full/9/5/a/945731-3840x2160-desktop-4k-matte-black-wallpaper-image.jpg');
+    background-size: cover; /* Cobre todo o fundo com a imagem */
+    color: white; /* Define a cor do texto padrão como branca para melhor contraste */
 }
 
-nav
-{
+nav {
+    width: 100%; /* Faz a nav ocupar toda a largura da tela */
     padding: 10px;
     background-color: rgb(210, 212, 215);
     text-align: right;
-    height: 35px;
-    margin: 10px;
+    height: 50px; /* Aumenta a altura para melhorar a legibilidade */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente os itens dentro da nav */
 }
 
-nav a
-{
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end; /* Alinha os itens da lista para a direita */
+    width: 100%; /* Faz a lista ocupar toda a largura disponível */
+    padding: 15px;
+    margin-top: 10px;
+}
+
+nav h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 20px; /* Diminui a margem esquerda para maior proximidade com o logo */
+}
+
+nav a {
     text-decoration: none;
     color: black;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
     padding: 10px; /* Adiciona espaçamento ao redor do texto */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o texto dos links */
 }
 
-nav img
-{
+nav img {
     width: 40px;
     height: 40px;
-    float: left;
+    margin-right: 10px; /* Adiciona espaço entre a imagem e o texto */
 }
 
-header
-{
+header {
     text-align: center;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    padding: 10px;
-    margin: 10px;
-    color: lightgray;
-}
-
-main
-{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    text-align: center;
-    column-gap: 20px;
-    padding: 10px;
-    margin: 10px;
-}
-
-.container
-{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    height: 400px;
+    padding: 20px; /* Aumenta o padding para maior conforto visual */
+    color: lightgray;
+    margin: 0; /* Remove margem para ocupar toda a largura */
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ajusta as colunas para uma melhor responsividade */
+    text-align: center;
+    gap: 20px; /* Usa gap para espaçamento uniforme entre as células */
+    padding: 10px;
+    margin: 10px;
+    width: 100%; /* Faz o main ocupar toda a largura */
+}
+
+.container {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: lightgrey;
     border-radius: 30px;
     padding: 10px;
+    width: 100%; /* Faz o container ocupar toda a largura */
 }
 
-.container article
-{
+.container article {
     padding: 10px;
-
 }
 
-footer
-{
+footer {
+    width: 100%; /* Faz o footer ocupar toda a largura da tela */
     padding: 10px;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -80,55 +94,31 @@ footer
     margin-top: 10px;
 }
 
-.ic
-{
+.ic {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 2fr;
     text-align: center;
-    column-gap: 20px;
     padding: 10px;
-    margin: 10px;
-    row-gap: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: lightgray;
     border-radius: 20px;
+    width: 100%; /* Faz o ic ocupar toda a largura */
 }
 
-.forms
-{
+.forms {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    text-align: center;
-    column-gap: 10px;
+    grid-template-columns: repeat(2, 1fr); /* Ajusta as colunas para responsividade */
+    gap: 10px; /* Usa gap para espaçamento uniforme */
     padding: 10px;
     margin: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: lightgray;
     border-radius: 20px;
-    
+    width: 100%; /* Faz o forms ocupar toda a largura */
 }
 
-#nome
-{
-    width: 300px;
-    margin: 5px;
-    
-}
-#email
-{
-    width: 300px;
-    margin: 5px
-}
-#telefone
-{
-    width: 300px;
-    margin: 5px
-}
-#curso
-{
-    width: 300px;
-    margin: 5px
-
+input, select {
+    width: 100%; /* Faz os inputs e selects ocuparem toda a largura do container */
+    padding: 10px; /* Adiciona padding para melhor conforto visual */
+    margin: 5px 0; /* Alinha a margem verticalmente */
 }
