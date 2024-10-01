@@ -1,4 +1,4 @@
-let formatted = true;
+/* let formatted = true;
 
 if (formatted) {
   alert('The code is easy to read');
@@ -74,4 +74,33 @@ let status = false;
 console.log(status);
 let word = status.toString();
 console.log(status);
-let back = Boolean(str);
+let back = Boolean(str); */
+
+// Função para gerar uma posição aleatória dentro da janela do navegador
+
+// Função para gerar uma posição aleatória dentro da janela do navegador
+function posicaoAleatoria() {
+  const larguraJanela = window.innerWidth;
+  const alturaJanela = window.innerHeight;
+
+  // Define a posição aleatória dentro dos limites da janela
+  const novaPosicaoX = Math.random() * (larguraJanela - 100); // 100 para não sair da janela
+  const novaPosicaoY = Math.random() * (alturaJanela - 50);   // 50 para evitar sobreposição na margem superior
+
+  return { x: novaPosicaoX, y: novaPosicaoY };
+}
+
+// Função para mover o botão quando o mouse passa por cima
+function moverBotao() {
+  const botao = document.getElementById("botao");
+  const novaPosicao = posicaoAleatoria();
+
+  botao.style.left = novaPosicao.x + "px";
+  botao.style.top = novaPosicao.y + "px";
+}
+
+// Adiciona o evento de passar o mouse sobre o botão
+document.getElementById("botao").addEventListener("mouseover", moverBotao);
+
+
+
