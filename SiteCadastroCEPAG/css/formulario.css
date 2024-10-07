@@ -1,0 +1,126 @@
+/* -----------------------------------------------HEADER----------------------------------------------- */
+
+header {
+    background-color: #f8f9fa;
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    column-gap: 2vh;
+    padding: 4vh 6rem;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+header img {
+    height: 10vh;
+}
+
+/* -----------------------------------------------PAGE----------------------------------------------- */
+
+main {
+    display: grid;
+    grid-template-columns: 0.5fr 5fr 0.5fr; /* Divide o main em 3 colunas */
+    text-align: left;
+    row-gap: 4vh;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    width: 100%;
+}
+
+form {
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+input {
+
+    width: 100%;
+}
+
+/* Para remover setas em todos os navegadores */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* Chrome, Safari, Edge */
+    margin: 0; /* Remove a margem */
+}
+
+button {
+
+    background-color: #4157a3;
+    color: white;
+    border: none;
+    border-radius:5px;
+    padding: 10px;
+
+}
+
+.Assinatura {
+    text-align: center; /* Centraliza o conteúdo */
+    margin-top: 50px; /* Espaçamento acima da seção */
+    padding: 10px;
+}
+
+.signature-line {
+    width: 300px; /* Largura da linha de assinatura */
+    height: 1px; /* Altura da linha */
+    background-color: #ffffff; /* Cor da linha */
+    margin: 0 auto; /* Centraliza a linha */
+    position: relative; /* Para posicionar o texto em relação à linha */
+}
+
+.signature-name {
+    margin-top: 10px; /* Espaçamento acima do nome */
+    font-size: 16px; /* Tamanho da fonte */
+    text-align: center;
+}
+
+.dataAtual {
+
+    text-align: right;
+
+}
+
+/* -----------------------------------------------FOOTER----------------------------------------------- */
+
+/* Define a cor de fundo do rodapé */
+footer {
+    background-color: #4157a3;
+    color: white;
+    padding: 4vh 6rem;
+    align-items: center;
+    text-align: center;
+    padding-right: 20%;
+    padding-left: 20%;
+    column-gap: 10px;
+}
+
+.seisColunas {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr 0.7fr 0.1fr 0.1fr;
+    column-gap: 40px;
+    text-decoration: none;
+    color: white;
+}
+
+.seisColunas a {
+    text-decoration: none;
+    color: white;
+}
+
+footer p{
+    margin: 0;
+}
+
+.logoFacebook {
+
+    width: 40px;
+}
+
+.logoInstagram {
+
+    width: 30px;
+}
+
+
+
