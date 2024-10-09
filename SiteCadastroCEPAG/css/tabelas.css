@@ -1,0 +1,137 @@
+/* tabelas.css */
+
+.tabela{
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+/**/
+.titulo {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    background-color: #4157a3;
+    color: white;
+    font-weight: 500;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    padding: 0px 10px;
+}
+
+.duplo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.duplo p{
+    padding: 0;
+}
+/**/
+
+.linha{
+    border-bottom: 0.5px solid #dee2e6;
+    border-left: 0.5px solid #dee2e6;
+    border-right: 0.5px solid #dee2e6;
+    column-gap: 1vw;
+    padding: 0 1vw 0 1vw;
+}
+
+.branca{
+    background-color: white;
+}
+
+.cinza{
+    background-color: #f2f2f2;
+}
+
+.fim {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.bordaEsquerda{
+    border-left: 0.5px solid #dee2e6;
+    padding-left: 1vw;
+}
+
+.bordaDireita{
+    border-right: 0.5px solid #dee2e6;
+    padding-right: 1vw;
+}
+
+/**/
+
+.quatroColunas .linha{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.seisColunas .linha{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.oitoColunas .linha{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+/**/
+
+.linhaPTL{
+    display: grid;
+    grid-template-columns: 0.66fr 1fr;
+    padding: 0 1vw 0 1vw;
+}
+
+.fimPTL{
+    border-bottom-left-radius: 15px;
+}
+
+.fotos{
+    padding: 10px;
+}
+
+.textoinformativo{
+    text-align: justify; 
+}
+
+/* Coordenadas no Plano Topográfico Local (PTL) - CSS Grid Module */
+.texto { grid-area: origem; }
+.linha1 { grid-area: linha1; }
+.linha2 { grid-area: linha2; }
+.linha3 { grid-area: linha3; }
+.linha4 { grid-area: linha4; }
+
+.textOrigem {
+    display: grid;
+    grid-template-areas:
+      'linha1 origem'
+      'linha2 origem'
+      'linha3 origem'
+      'linha4 origem';
+    grid-template-columns: 1fr 1.001fr;
+    border-bottom: 0.5px solid #dee2e6;
+    border-left: 0.5px solid #dee2e6;
+    border-right: 0.5px solid #dee2e6;
+    background-color: #f2f2f2;
+}
+
+/* Adicione um estilo semelhante para as áreas de texto */
+@media print{
+    .fotos{
+        width: 80% !important;
+    }
+}
+
+/* Regras para celular (até 767px de largura) */
+@media screen and (max-width: 767px) {
+    .fotos{
+        width: 100% !important;
+    }
+}
+/* Regras para iPad/Tablet (largura mínima de 768px e largura máxima de 1200px)*/
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .fotos{
+        width: 100% !important;
+    }
+}
