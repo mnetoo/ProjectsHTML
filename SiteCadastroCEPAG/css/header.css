@@ -23,6 +23,7 @@ header img {
     header {
         column-gap: 2vh !important;
         padding: 1vh 2rem !important;
+        background: none;
     }
     header img {
         height: 4vh !important;

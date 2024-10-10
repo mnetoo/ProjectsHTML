@@ -37,6 +37,7 @@ footer a{
         padding-right: 5% !important;
         padding-left: 5% !important;
         grid-template-columns: 1.1fr 1.1fr 0.6fr 0.7fr 0.08fr 0.08fr !important;
+        display: none;
     }
     footer p, span,
     footer .footer-link {

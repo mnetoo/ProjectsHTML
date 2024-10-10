@@ -37,3 +37,56 @@ main p {
 main input {
     margin: 10px 0px 10px 0px;
 }
+
+button {
+
+    background-color: #4157a3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    height: 35px;
+}
+
+.botao {
+
+    grid-column-start: 2;
+    grid-column-end: 2;
+    margin: 0 auto;
+
+}
+
+.dataAtual {
+
+    grid-column-start: 2;
+    grid-column-end: 2;
+    text-align: right;
+
+}
+
+.assinatura {
+
+    grid-column-start: 2;
+    grid-column-end: 2;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.line {
+    border-top: 1px solid black;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.ass {
+    margin-top: 5px;
+}
+
+@media print {
+
+    button {
+
+        display: none;
+
+    }
+
+}

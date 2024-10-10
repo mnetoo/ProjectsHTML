@@ -60,6 +60,11 @@
 
 /**/
 
+.duasColunas .linha{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .quatroColunas .linha{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
