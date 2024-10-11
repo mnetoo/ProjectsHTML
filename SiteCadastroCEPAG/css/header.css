@@ -21,12 +21,23 @@ header img {
 /* Regras para a página de impressão */
 @media print {
     header {
-        column-gap: 2vh !important;
-        padding: 1vh 2rem !important;
-        background: none;
+        margin-top: 0;
+        margin-bottom: 0;
+        white-space: nowrap;
+        margin-top: 10px;
+    }
+    .header-text {
+        margin: 0;
+        font-size: 10pt; 
+    }
+    .header-text p {
+      line-height: 0.5; 
     }
     header img {
-        height: 4vh !important;
+        height: 50pt;
+    }
+    header .navbar {
+        padding: 10pt;
     }
 }
 

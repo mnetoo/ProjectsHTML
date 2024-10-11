@@ -1,7 +1,7 @@
 /* tabelas.css */
 
 .tabela{
-    grid-column-start: 2;
+    grid-column-start: 2 !important;
     grid-column-end: 2;
 }
 
@@ -60,24 +60,24 @@
 
 /**/
 
-.duasColunas .linha{
+.duasColunas .linha {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 0.28fr 1.82fr;
 }
 
-.quatroColunas .linha{
+.quatroColunas .linha {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 0.55fr 1.45fr 0.80fr 1.20fr;
 }
 
-.seisColunas .linha{
+.seisColunas .linha {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: 0.85fr 1.15fr 1fr 1fr 1fr 1fr;
 }
 
-.oitoColunas .linha{
+.oitoColunas .linha {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: 1.15fr 0.85fr 0.45fr 1.55fr 0.8fr 1.2fr 0.25fr 1.75fr;
 }
 
 /**/
@@ -140,3 +140,4 @@
         width: 100% !important;
     }
 }
+

@@ -3,23 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../img/CEPAG.png" type="image/x-icon">
+    <title>Formulário CEPAG</title>
+
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/formulario.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/tabelas.css">
 
-    <!-- Font Awesome CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
-
-    <title>Formulário CEPAG</title>
 </head>
 
 <header>
-    <a href="https://ufpr.br/" target="_blank">    
+    <a href="https://ufpr.br/" target="_blank">
         <img src="../img/UFPR.png">
     </a>
 
@@ -31,7 +33,7 @@
         UNIVERSIDADE FEDERAL DO PARANÁ<br>
         SETOR DE CIÊNCIAS DA TERRA<br>
         CENTRO DE PESQUISAS APLICADAS EM GEOINFORMAÇÃO<br>
-        <b>FORMULÁRIO DE DADOS PESSOAIS E DADOS BANCÁRIOS
+        <b>FORMULÁRIO DE DADOS PESSOAIS E BANCÁRIOS
             <br>CONTRATAÇÃO DE ESTAGIÁRIOS NO CEPAG</b>
     </p>
     <!-- Aqui vai o QRCode -->
@@ -43,14 +45,20 @@
 <body>
     <main>
         <form>
-            <section class="tabela quatroColunas">
-                <p class="titulo">Dados Relativos à Identifiação</p>
-                <div class="linha branca">
-                    <p>Nome</p>
-                    <input class="form-control" type="text" name="Nome">
-                    <p>Data de Nascimento</p>
-                    <input class="form-control" type="date" id="DataNascimento" name="DataNascimento">
+
+            <!-- Dados Relativos á Identificação -->
+            <section class="tabela duasColunas">
+                <div class="quatroColunas">
+                    <p class="titulo">Dados Relativos à Identifiação</p>
+                    <div class="linha branca">
+                        <p>Nome</p>
+                        <input class="form-control" type="text" name="nome">
+                        <p>Data de Nascimento</p>
+                        <input class="form-control" type="date" id="dataNascimento" name="dataNascimento">
+                    </div>
                 </div>
+
+                <!-- RG - EXPEDIÇÃO - EMISSOR - CPF -->
                 <div class="tabela oitoColunas">
                     <div class="linha cinza">
                         <p>RG</p>
@@ -61,12 +69,14 @@
                         <input class="form-control" type="date" id="expedição" name="expedição">
 
                         <p>Orgão Emissor</p>
-                        <input class="form-control" type="text" name="OrgaoEmissor" id="OrgãoEmissor" maxlength="14">
+                        <input class="form-control" type="text" name="orgaoEmissor" id="orgaoEmissor" maxlength="14">
 
                         <p>CPF</p>
-                        <input class="form-control" type="number" name="CPF">
+                        <input class="form-control" type="number" name="CPF" id="CPF">
                     </div>
                 </div>
+
+                <!-- EMAIL - TELEFONE - CELULAR -->
                 <div class="tabela seisColunas">
                     <div class="linha branca">
                         <p>Email</p>
@@ -78,158 +88,166 @@
                         <input class="form-control" type="tel" id="telefone" name="telefone"
                             placeholder="(00) 0000-0000">
                     </div>
-                    <div class="tabela duasColunas">
-                        <div class="linha cinza">
-                            <p>Nacionalidade</p>
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected></option>
-                                <option value="1">Brasileiro (a)</option>
-                                <option value="2">Estrangeiro (a)</option>
-                                <option value="3">Naturalizado (a)</option>
-                            </select>
+                </div>
 
-                            <p>Chegada no País</p>
-                            <input class="form-control" type="date" id="Chegada no País" name="Chegada no País">
+                <!-- NACIONALIDADE - CHEGADA -->
+                <div class="tabela quatroColunas">
+                    <div class="linha cinza">
+                        <p>Nacionalidade</p>
+                        <select class="form-select" aria-label="Default select example" id="nacionalidade">
+                            <option selected></option>
+                            <option value="1">Brasileiro (a)</option>
+                            <option value="2">Estrangeiro (a)</option>
+                            <option value="3">Naturalizado (a)</option>
+                        </select>
+
+                        <p>Chegada no País</p>
+                        <input class="form-control" type="date" id="chegadaPais" name="chegadaPais">
+                    </div>
+                </div>
+
+                <!-- PAI - MAE -->
+                <div class="tabela quatroColunas">
+                    <div class="linha branca">
+                        <p>Nome do Pai</p>
+                        <input class="form-control" type="text" name="nomePai" id="nomePai">
+
+                        <p>Nome da Mãe</p>
+                        <input class="form-control" type="text" name="nomeMae" id="nomeMae">
+                    </div>
+                </div>
+
+                <!-- SEX0 - ESTADO CIVIL - DEPENDENTES -->
+                <div class="tabela seisColunas">
+                    <div class="linha cinza">
+                        <p>Sexo</p>
+                        <select class="form-select" id="sexo">
+                            <option selected></option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Feminino</option>
+                            <option value="3">Prefiro não informar</option>
+                        </select>
+
+                        <p>Estado Civil</p>
+                        <select class="form-select" id="estadocivil">
+                            <option selected></option>
+                            <option value="1">Casado (a)</option>
+                            <option value="2">Solteiro (a)</option>
+                            <option value="3">União Estável</option>
+                        </select>
+
+                        <p>Nº Dependentes</p>
+                        <input class="form-control" type="number" min="0" name="dependentes" id="dependentes">
+                    </div>
+                </div>
+
+                <!-- SANGUE - COR -->
+                <div class="tabela quatroColunas">
+                    <div class="linha branca">
+                        <p>Grupo Sanguíneo</p>
+                        <select class="form-select" id="grupoSanguineo">
+                            <option selected></option>
+                            <option value="1">A+</option>
+                            <option value="2">A-</option>
+                            <option value="3">B+</option>
+                            <option value="4">B-</option>
+                            <option value="5">AB+</option>
+                            <option value="6">AB-</option>
+                            <option value="7">O+</option>
+                            <option value="8">O-</option>
+                        </select>
+
+                        <p>Cor da Pele</p>
+                        <select class="form-select" id="corPele">
+                            <option selected></option>
+                            <option value="1">Branco</option>
+                            <option value="2">Pardo</option>
+                            <option value="3">Preto</option>
+                            <option value="4">Amarelo</option>
+                            <option value="5">Indígena</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- ESCOLARIDADE - FORMAÇÃO -->
+                <div class="tabela quatroColunas">
+                    <div class="linha cinza">
+                        <p>Escolaridade</p>
+                        <input class="form-control" type="text" name="escolaridade" id="escolaridade">
+
+                        <p>Formação em Andamento</p>
+                        <input class="form-control" type="text" name="formacao" id="formacao">
+                    </div>
+                </div>
+
+                <!-- INSTITUIÇÃO -->
+                <div class="tabela duasColunas">
+                    <div class="linha branca">
+                        <p>Instituição de Ensino</p>
+                        <input class="form-control" type="text" name="instituicao" id="instituicao">
+                    </div>
+                </div>
+
+                <!-- REDES SOCIAIS -->
+                <div class="quatroColunas">
+                    <div class="linha cinza fim">
+                        <!-- Instagram -->
+                        <p>Instagram</p>
+                        <!-- <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                          </div> -->
+
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                aria-describedby="basic-addon1">
+                        </div>
+
+
+                        <!-- LinkedIn -->
+                        <p>LinkedIn</p>
+                        <div class="input-group ">
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                aria-describedby="basic-addon1">
                         </div>
                     </div>
-                    <div class="tabela duasColunas">
-                        <div class="linha branca">
-                            <p>Nome do Pai</p>
-                            <input class="form-control" type="text" name="NomedoPai">
-
-                            <p>Nome da Mãe</p>
-                            <input class="form-control" type="text" name="NomedoMae">
-                        </div>
-                    </div>
-                    <div class="tabela seisColunas">
-                        <div class="linha cinza">
-                            <p>Sexo</p>
-                            <select class="form-select">
-                                <option selected></option>
-                                <option value="1">Masculino</option>
-                                <option value="2">Feminino</option>
-                                <option value="3">Prefiro não informar</option>
-                            </select>
-
-                            <p>Estado Civil</p>
-                            <select class="form-select">
-                                <option selected></option>
-                                <option value="1">Casado (a)</option>
-                                <option value="2">Solteiro (a)</option>
-                                <option value="3">União Estável</option>
-                            </select>
-
-                            <p>Nº Dependentes</p>
-                            <input class="form-control" type="number" min="0" name="Dependentes">
-                        </div>
-                    </div>
-                    <div class="tabela quatroColunas">
-                        <div class="linha branca">
-                            <p>Grupo Sanguíneo</p>
-                            <select class="form-select">
-                                <option selected></option>
-                                <option value="1">A+</option>
-                                <option value="2">A-</option>
-                                <option value="3">B+</option>
-                                <option value="4">B-</option>
-                                <option value="5">AB+</option>
-                                <option value="6">AB-</option>
-                                <option value="7">O+</option>
-                                <option value="8">O-</option>
-                            </select>
-
-                            <p>Cor da Pele</p>
-                            <select class="form-select">
-                                <option selected></option>
-                                <option value="1">Branco</option>
-                                <option value="2">Pardo</option>
-                                <option value="3">Preto</option>
-                                <option value="4">Amarelo</option>
-                                <option value="5">Indígena</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="tabela oitoColunas">
-                        <div class="linha cinza">
-                            <p>Título Eleitoral</p>
-                            <input class="form-control" type="number" name="Título Eleitoral" id="Título Eleitoral">
-
-                            <p>Zona</p>
-                            <input class="form-control" type="number" name="Zona">
-
-                            <p>Seção</p>
-                            <input class="form-control" type="number" name="Seção">
-
-                            <p>Emissão</p>
-                            <input class="form-control" type="date" id="Emissão" name="Emissão">
-                        </div>
-                    </div>
-
-                    <div class="tabela seisColunas">
-                        <div class="linha branca">
-                            <p>Certificado Militar</p>
-                            <input class="form-control" type="number" name="Certificado Militar"
-                                id="Certificado Militar">
-
-                            <p>Série</p>
-                            <input class="form-control" type="number" name="Série">
-
-                            <p>Expeditor</p>
-                            <input class="form-control" type="text" name="Expeditor">
-                        </div>
-                    </div>
-
-                    <div class="tabela quatroColunas">
-                        <div class="linha cinza">
-                            <p>Escolaridade</p>
-                            <input class="form-control" type="text" name="Escolaridade">
-
-                            <p>Formação em Andamento</p>
-                            <input class="form-control" type="text" name="Formação em Andamento">
-                        </div>
-                    </div>
-
-                    <div class="tabela duasColunas">
-                        <div class="linha fim">
-                            <p>Instituição de Ensino</p>
-                            <input class="form-control" type="text" name="instituição">
-                        </div>
-                    </div>
+                </div>
             </section>
 
-            <section class="tabela quatroColunas">
+            <!-- ENDEREÇO RESIDENCIAL -->
+            <section class="tabela duasColunas">
                 <p class="titulo">Endereço Residencial</p>
                 <div class="tabela seisColunas">
                     <div class="linha branca">
                         <p>Rua</p>
-                        <input class="form-control" type="text" name="rua">
+                        <input class="form-control" type="text" name="rua" id="rua">
 
                         <p>Número</p>
-                        <input class="form-control" type="number" name="número">
+                        <input class="form-control" type="number" name="numero" id="numero">
 
                         <p>Complemento</p>
-                        <input class="form-control" type="text" name="complemento">
+                        <input class="form-control" type="text" name="complemento" id="complemento">
                     </div>
                 </div>
 
                 <div class="tabela quatroColunas">
                     <div class="linha cinza">
                         <p>Bairro</p>
-                        <input class="form-control" type="text" name="bairro">
+                        <input class="form-control" type="text" name="bairro" id="bairroRes">
 
                         <p>CEP</p>
-                        <input class="form-control" type="number" name="cep">
+                        <input class="form-control" type="number" name="cep" id="cep">
                     </div>
                 </div>
 
                 <div class="tabela quatroColunas">
                     <div class="linha fim">
                         <p>Cidade</p>
-                        <input class="form-control" type="text" name="cidade">
+                        <input class="form-control" type="text" name="cidade" id="cidadeRes">
 
                         <p>UF</p>
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-select" aria-label="Default select example" id="uf">
                             <option selected></option>
                             <option value="1">PR</option>
                             <option value="2">SP</option>
@@ -239,55 +257,59 @@
                 </div>
             </section>
 
-            <section class="tabela quatroColunas">
+            <!-- DADOS BANCÁRIOS -->
+            <section class="tabela duasColunas">
                 <p class="titulo">Dados Bancários</p>
                 <div class="tabela seisColunas">
                     <div class="linha branca">
                         <p>Banco</p>
-                        <input class="form-control" type="text" name="banco">
+                        <input class="form-control" type="text" name="banco" id="banco">
 
                         <p>Agência</p>
-                        <input class="form-control" type="number" name="agencia">
+                        <input class="form-control" type="number" name="agencia" id="agencia">
 
                         <p>Conta</p>
-                        <input class="form-control" type="number" name="conta">
+                        <input class="form-control" type="number" name="conta" id="conta">
                     </div>
                 </div>
 
                 <div class="tabela duasColunas">
                     <div class="linha cinza">
                         <p>Nome da Agência</p>
-                        <input class="form-control" type="text" name="nomeAgencia">
+                        <input class="form-control" type="text" name="nomeAgencia" id="nomeAgencia">
                     </div>
                 </div>
 
                 <div class="tabela quatroColunas">
                     <div class="linha fim">
                         <p>Cidade</p>
-                        <input class="form-control" type="text" name="cidade">
+                        <input class="form-control" type="text" name="cidadeAgencia" id="cidadeAgencia">
 
                         <p>Bairro</p>
-                        <input class="form-control" type="text" name="bairro">
+                        <input class="form-control" type="text" name="bairroAgencia" id="bairroAgencia">
                     </div>
                 </div>
             </section>
 
 
             <!-- DATA -->
-            <div class="dataAtual">
+            <section class="tabela" style="text-align:right;">
                 <p id="data"></p>
-            </div>
+            </section>
 
             <!-- ASSINATURA -->
-            <div class="assinatura">
+            <section class="tabela" style="text-align:center; ">
                 <div class="line"></div>
                 <p class="ass">Assinatura</p>
-            </div>
+            </section>
 
             <!-- IMPRESSÃO -->
-            <div class="botao">
-                <button type="submit" onclick="imprimirPagina()">Imprimir/Gerar PDF</button>
-            </div>
+            <section class="tabela no-print" style="text-align:center; ">
+                <button type="button" class="btn btn-light botaoAzul" onclick="imprimirPagina()">Imprimir/Gerar
+                    PDF</button>
+                <button type="button" class="btn btn-light botaoAzul">Salvar Informações</button>
+                <button type="button" class="btn btn-light botaoAzul">Carregar Informações</button>
+            </section>
         </form>
     </main>
 

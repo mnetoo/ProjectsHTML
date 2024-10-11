@@ -1,6 +1,6 @@
-/* styles.css */
+/* formulario.css */
 
-/* BARRA LATERAL MENOR */
+/*BARRA LATERAL MENOR*/
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -9,7 +9,35 @@
     background: lightgray;
 }
 
-/* CONTEÚDO DA PÁGINA */
+/*MUDANÇA DE FONTE*/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button,
+input,
+label,
+li,
+ul {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-link {
+    font-family: 'Poppins', sans-serif;
+    color: inherit;
+    text-decoration: none;
+}
+
+/**/
 
 html {
     text-align: center;
@@ -34,59 +62,105 @@ main p {
     line-height: 3rem;
 }
 
-main input {
+main input, span {
     margin: 10px 0px 10px 0px;
 }
 
-button {
+/* Regras para a página de impressão */
+@media print {
+    /* Redefinir margens para folha A4 padrão (210 x 297 mm) */
+    @page {
+        margin: 0;        
+    }
+    body{
+      white-space: nowrap;
+      line-height: 1; 
+      align-items: center;
+      font-size: 11pt;
+    } 
+    input.form-control{
+      font-size: 10pt;
+      line-height: 0.5; 
+    }
+    .no-print {
+        display: none; 
+    }
+    form {
+        row-gap: 1vh !important;
+    }
+  }
 
-    background-color: #4157a3;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    height: 35px;
+
+/* Regras para celular (até 767px de largura) */
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 5px !important;
+    }
+
+    main {
+        row-gap: 2vh !important;
+        padding-top: 2vh !important;
+        padding-bottom: 2vh !important;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+        font-size: 5px !important;
+    }
+
+    main p {
+        margin: 0 !important;
+        vertical-align: middle !important;
+        line-height: 1rem !important;
+    }
 }
 
-.botao {
+/* Regras para iPad/Tablet (largura mínima de 768px e largura máxima de 1200px)*/
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    body {
+        font-size: 10px !important;
+    }
 
-    grid-column-start: 2;
-    grid-column-end: 2;
-    margin: 0 auto;
+    main {
+        row-gap: 2vh !important;
+        padding-top: 2vh !important;
+        padding-bottom: 2vh !important;
+    }
 
+    input,
+    select,
+    textarea,
+    button {
+        font-size: 10px !important;
+    }
 }
 
-.dataAtual {
-
-    grid-column-start: 2;
-    grid-column-end: 2;
-    text-align: right;
-
-}
-
-.assinatura {
-
-    grid-column-start: 2;
-    grid-column-end: 2;
-    margin-top: 50px;
-    text-align: center;
-}
-
+/*ITENS CONTEÚDO DA PÁGINA*/
 .line {
     border-top: 1px solid black;
     width: 300px;
     margin: 0 auto;
 }
 
-.ass {
-    margin-top: 5px;
+.botaoAzul{
+    background-color: #4157a3 !important;
+    color: white;
 }
 
-@media print {
-
-    button {
-
-        display: none;
-
-    }
-
+/* Remover setas no Chrome, Safari, Edge e Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
+
+.btn {
+    background-color: #f2f2f2;
+    border-color: #cccccc;
+  }
+  
+  .inputButton{
+    margin: 10 -1!important;
+  }

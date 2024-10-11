@@ -1,16 +1,26 @@
 function imprimirPagina() {
     window.print();
 }
+//-----------------------------------------------------------------------
 
+// Função para obter a data atual formatada
 function obterDataAtual() {
-    const hoje = new Date(); // Cria um objeto de data com a data atual
+    const hoje = new Date();
 
-    const dias = hoje.getDate(); // Obtém o dia do mês
-    const mes = hoje.toLocaleString('pt-BR', { month: 'long' }); // Obtém o mês em formato longo (ex: Outubro)
-    const ano = hoje.getFullYear(); // Obtém o ano
+    const dias = hoje.getDate();
+    const mes = hoje.toLocaleString('pt-BR', { month: 'long' });
+    const ano = hoje.getFullYear();
 
-    return `Curitiba, ${dias} de ${mes} de ${ano}.`; // Retorna a string formatada
+    // Retorna a string formatada com a data
+    return `Curitiba, ${dias} de ${mes} de ${ano}.`;
 }
 
-// Insere a data formatada no elemento com o id "data"
-document.getElementById('data').textContent = obterDataAtual();
+// Chama a função e insere a data no elemento com id "data"
+function mostrarDataAtual() {
+    const dataAtual = obterDataAtual();
+    document.getElementById("data").textContent = dataAtual; // Insere a data no elemento
+}
+
+// Chama a função quando a página for carregada
+window.onload = mostrarDataAtual;
+//------------------------------------------------------------------------
