@@ -1,0 +1,71 @@
+/*============ MUDANÇA DE FONTE ============*/
+/* Estilo para a página */
+body, header, footer, h1, h2, h3, h4, h5, h6, p, a, button, input, label, li, ul {
+  font-family: 'Poppins', sans-serif;
+}
+/* Estilo para o rodapé (footer) */
+.footer-link {
+  color: inherit;
+  margin-right: 8vh;
+  text-decoration: none;
+}
+
+/*============ NAVBAR CABEÇALHO E RODAPÉ ============*/
+.navbar {
+  justify-content: center;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+
+/*============ ITENS DO RODAPÉ ============*/
+
+/* Tamanho dos ícones */
+.footer-link i {
+  font-size: 2vh;
+}
+
+/* Espaçamento entre Facebook e Instagram */
+.footer-link.facebook {
+  margin-right: 1vw;
+}
+
+/* Estilos para celular (até 767px de largura) */
+@media (max-width: 767px) {
+  .footer-link.facebook {
+    margin-right: 13vw; /* Adiciona margem à direita para separar os links */
+  }
+
+  .footer-link {
+    margin-right: 13vw; /* Adiciona margem à direita para separar os links */
+  }
+
+  .footer-link.instagram{
+    margin: 0;
+  }
+
+}
+
+/* Estilos para iPad/Tablet (largura mínima de 768px e largura máxima de 1200px)*/
+@media (min-width: 768px) and (max-width: 1200px) {
+  .footer-link.facebook {
+    margin-right: 13vw; /* Adiciona margem à direita para separar os links */
+  }
+
+  .footer-link {
+    margin-right: 13vw; /* Adiciona margem à direita para separar os links */
+  }
+
+  .footer-link.instagram{
+    margin: 0;
+  }
+
+}
+
+
+
+
+
+
+
+

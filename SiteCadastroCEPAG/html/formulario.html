@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/tabelas.css">
-
 </head>
 
 <header>
@@ -44,7 +43,7 @@
 
 <body>
     <main>
-        <form>
+        <form id="form">
 
             <!-- Dados Relativos á Identificação -->
             <section class="tabela duasColunas">
@@ -52,7 +51,8 @@
                     <p class="titulo">Dados Relativos à Identifiação</p>
                     <div class="linha branca">
                         <p>Nome</p>
-                        <input class="form-control" type="text" name="nome">
+                        <input class="form-control" type="text" name="nome" id="nome">
+
                         <p>Data de Nascimento</p>
                         <input class="form-control" type="date" id="dataNascimento" name="dataNascimento">
                     </div>
@@ -66,13 +66,13 @@
                             name="rg" id="rg" maxlength="14">
 
                         <p>Expedição</p>
-                        <input class="form-control" type="date" id="expedição" name="expedição">
+                        <input class="form-control" type="date" id="expedicao" name="expedicao">
 
                         <p>Orgão Emissor</p>
                         <input class="form-control" type="text" name="orgaoEmissor" id="orgaoEmissor" maxlength="14">
 
                         <p>CPF</p>
-                        <input class="form-control" type="number" name="CPF" id="CPF">
+                        <input class="form-control" type="number" name="cpf" id="cpf">
                     </div>
                 </div>
 
@@ -80,13 +80,14 @@
                 <div class="tabela seisColunas">
                     <div class="linha branca">
                         <p>Email</p>
-                        <input type="email" class="form-control" id="floatingInputValue">
+                        <input type="email" class="form-control" id="email" name="email">
+
                         <p>Telefone</p>
                         <input class="form-control" type="tel" id="telefone" name="telefone"
                             placeholder="(00) 0000-0000">
+
                         <p>Celular</p>
-                        <input class="form-control" type="tel" id="telefone" name="telefone"
-                            placeholder="(00) 0000-0000">
+                        <input class="form-control" type="tel" id="celular" name="celular" placeholder="(00) 0000-0000">
                     </div>
                 </div>
 
@@ -94,14 +95,15 @@
                 <div class="tabela quatroColunas">
                     <div class="linha cinza">
                         <p>Nacionalidade</p>
-                        <select class="form-select" aria-label="Default select example" id="nacionalidade">
+                        <select class="form-select" aria-label="Default select example" id="nacionalidade"
+                            name="nacionalidade">
                             <option selected></option>
-                            <option value="1">Brasileiro (a)</option>
-                            <option value="2">Estrangeiro (a)</option>
-                            <option value="3">Naturalizado (a)</option>
+                            <option value="Brasileiro (a)">Brasileiro (a)</option>
+                            <option value="Estrangeiro (a)">Estrangeiro (a)</option>
+                            <option value="Naturalizado (a)">Naturalizado (a)</option>
                         </select>
 
-                        <p>Chegada no País</p>
+                        <p id="chegadaLabel">Chegada no País</p>
                         <input class="form-control" type="date" id="chegadaPais" name="chegadaPais">
                     </div>
                 </div>
@@ -121,19 +123,19 @@
                 <div class="tabela seisColunas">
                     <div class="linha cinza">
                         <p>Sexo</p>
-                        <select class="form-select" id="sexo">
+                        <select class="form-select" id="sexo" name="sexo">
                             <option selected></option>
-                            <option value="1">Masculino</option>
-                            <option value="2">Feminino</option>
-                            <option value="3">Prefiro não informar</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Prefiro não informar">Prefiro não informar</option>
                         </select>
 
                         <p>Estado Civil</p>
-                        <select class="form-select" id="estadocivil">
+                        <select class="form-select" id="estadocivil" name="estadocivil">
                             <option selected></option>
-                            <option value="1">Casado (a)</option>
-                            <option value="2">Solteiro (a)</option>
-                            <option value="3">União Estável</option>
+                            <option value="Casado (a)">Casado (a)</option>
+                            <option value="Solteiro (a)">Solteiro (a)</option>
+                            <option value="União Estável">União Estável</option>
                         </select>
 
                         <p>Nº Dependentes</p>
@@ -145,26 +147,26 @@
                 <div class="tabela quatroColunas">
                     <div class="linha branca">
                         <p>Grupo Sanguíneo</p>
-                        <select class="form-select" id="grupoSanguineo">
+                        <select class="form-select" id="grupoSanguineo" name="grupoSanguineo">
                             <option selected></option>
-                            <option value="1">A+</option>
-                            <option value="2">A-</option>
-                            <option value="3">B+</option>
-                            <option value="4">B-</option>
-                            <option value="5">AB+</option>
-                            <option value="6">AB-</option>
-                            <option value="7">O+</option>
-                            <option value="8">O-</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
                         </select>
 
                         <p>Cor da Pele</p>
-                        <select class="form-select" id="corPele">
+                        <select class="form-select" id="corPele" name="corPele">
                             <option selected></option>
-                            <option value="1">Branco</option>
-                            <option value="2">Pardo</option>
-                            <option value="3">Preto</option>
-                            <option value="4">Amarelo</option>
-                            <option value="5">Indígena</option>
+                            <option value="Branco">Branco</option>
+                            <option value="Pardo">Pardo</option>
+                            <option value="Preto">Preto</option>
+                            <option value="Amarelo">Amarelo</option>
+                            <option value="Indígena">Indígena</option>
                         </select>
                     </div>
                 </div>
@@ -173,7 +175,19 @@
                 <div class="tabela quatroColunas">
                     <div class="linha cinza">
                         <p>Escolaridade</p>
-                        <input class="form-control" type="text" name="escolaridade" id="escolaridade">
+                        <select class="form-select" id="escolaridade" name="escolaridade">
+                            <option selected></option>
+                            <option value="Fundamental Incompleto">Fundamental Incompleto</option>
+                            <option value="Fundamental Completo">Fundamental Completo</option>
+                            <option value="Médio Incompleto">Médio Incompleto</option>
+                            <option value="Médio Completo">Médio Completo</option>
+                            <option value="Superior Incompleto">Superior Incompleto</option>
+                            <option value="Superior Completo">Superior Completo</option>
+                            <option value="Técnico/Profissionalizante Incompleto">Técnico/Profissionalizante Incompleto
+                            </option>
+                            <option value="Técnico/Profissionalizante Completo">Técnico/Profissionalizante Completo
+                            </option>
+                        </select>
 
                         <p>Formação em Andamento</p>
                         <input class="form-control" type="text" name="formacao" id="formacao">
@@ -184,7 +198,8 @@
                 <div class="tabela duasColunas">
                     <div class="linha branca">
                         <p>Instituição de Ensino</p>
-                        <input class="form-control" type="text" name="instituicao" id="instituicao">
+                        <select class="form-control" name="instituicao" id="instituicao"></select>
+                        <!-- <input class="form-control" type="text" name="instituicao" id="instituicao"> -->
                     </div>
                 </div>
 
@@ -193,15 +208,10 @@
                     <div class="linha cinza fim">
                         <!-- Instagram -->
                         <p>Instagram</p>
-                        <!-- <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1">@</span>
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                          </div> -->
-
                         <div class="input-group">
                             <span class="input-group-text" id="basic-addon1">@</span>
                             <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                                aria-describedby="basic-addon1">
+                                aria-describedby="basic-addon1" name="instagram" id="instagram">
                         </div>
 
 
@@ -209,7 +219,7 @@
                         <p>LinkedIn</p>
                         <div class="input-group ">
                             <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                                aria-describedby="basic-addon1">
+                                aria-describedby="basic-addon1" name="linkedin" id="linkedin">
                         </div>
                     </div>
                 </div>
@@ -220,38 +230,35 @@
                 <p class="titulo">Endereço Residencial</p>
                 <div class="tabela seisColunas">
                     <div class="linha branca">
-                        <p>Rua</p>
+                        <p>CEP</p>
+                        <input class="form-control" type="number" name="cep" id="cep">
+
+                        <p>Nome da Rua</p>
                         <input class="form-control" type="text" name="rua" id="rua">
 
                         <p>Número</p>
                         <input class="form-control" type="number" name="numero" id="numero">
-
-                        <p>Complemento</p>
-                        <input class="form-control" type="text" name="complemento" id="complemento">
                     </div>
                 </div>
 
                 <div class="tabela quatroColunas">
                     <div class="linha cinza">
-                        <p>Bairro</p>
-                        <input class="form-control" type="text" name="bairro" id="bairroRes">
+                        <p>Complemento</p>
+                        <input class="form-control" type="text" name="complemento" id="complemento">
 
-                        <p>CEP</p>
-                        <input class="form-control" type="number" name="cep" id="cep">
+                        <p>Bairro</p>
+                        <input class="form-control" type="text" name="bairroRes" id="bairroRes">
                     </div>
                 </div>
 
                 <div class="tabela quatroColunas">
                     <div class="linha fim">
                         <p>Cidade</p>
-                        <input class="form-control" type="text" name="cidade" id="cidadeRes">
+                        <input class="form-control" type="text" name="cidadeRes" id="cidadeRes">
 
                         <p>UF</p>
-                        <select class="form-select" aria-label="Default select example" id="uf">
-                            <option selected></option>
-                            <option value="1">PR</option>
-                            <option value="2">SP</option>
-                            <option value="3">RJ</option>
+                        <input type="text" class="form-control" id="uf" placeholder="Estado" readonly required
+                            name="uf">
                         </select>
                     </div>
                 </div>
@@ -273,10 +280,13 @@
                     </div>
                 </div>
 
-                <div class="tabela duasColunas">
+                <div class="tabela quatroColunas">
                     <div class="linha cinza">
                         <p>Nome da Agência</p>
                         <input class="form-control" type="text" name="nomeAgencia" id="nomeAgencia">
+
+                        <p>PIX</p>
+                        <input class="form-control" type="text" name="PIX" id="PIX">
                     </div>
                 </div>
 
@@ -307,39 +317,45 @@
             <section class="tabela no-print" style="text-align:center; ">
                 <button type="button" class="btn btn-light botaoAzul" onclick="imprimirPagina()">Imprimir/Gerar
                     PDF</button>
-                <button type="button" class="btn btn-light botaoAzul">Salvar Informações</button>
-                <button type="button" class="btn btn-light botaoAzul">Carregar Informações</button>
+
+                <button type="button" class="btn btn-light botaoAzul" onclick="submitForm()">Salvar Informações</button>
+
+                <!-- <button type="button" class="btn btn-light botaoAzul">Carregar Informações</button> -->
+                <label class="upload-txt inputButton botaoAzul" title="Carregar arquivo .txt">
+                    <input type="file" name="arquivo" id="" onchange="readCSV(this)" accept=".csv" required>Carregar
+                    Informações
+                </label>
             </section>
         </form>
     </main>
 
-
-
-
-    <!-- RODAPÉ -->
-    <footer>
-        <p class="d-none d-xl-inline d-print-inline">Desenvolvido pela Equipe do CEPAG</p>
-        <p class="d-none d-xl-inline d-print-inline">Sala CT17 - Edifício Camil Gemael</p>
-        <a href="mailto:cepag@ufpr.br" class="footer-link">
-            <i class="fas fa-envelope" id="icon"></i>
-            <span class="d-none d-xl-inline d-print-inline">cepag@ufpr.br</span>
-        </a>
-        <a href="tel:55 41 3361-3498" class="footer-link">
-            <i class="fas fa-phone" id="icon"></i>
-            <span class="d-none d-xl-inline d-print-inline">55 (41) 3361-3498</span>
-        </a>
-        <a href="https://www.facebook.com/cepagufpr/" target="_blank" class="footer-link facebook">
-            <i class="fa-brands fa-facebook" id="icon"></i>
-        </a>
-        <a href="https://www.instagram.com/cepag_ufpr" target="_blank" class="footer-link instagram">
-            <i class="fa-brands fa-instagram" id="icon"></i>
-        </a>
-    </footer>
-
+    <script src="../javascript/formulario.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../javascript/viacep.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="../javascript/formulario.js"></script>
 </body>
+
+<!-- RODAPÉ -->
+<footer>
+    <p class="d-none d-xl-inline d-print-inline">Desenvolvido pela Equipe do CEPAG</p>
+    <p class="d-none d-xl-inline d-print-inline">Sala CT17 - Edifício Camil Gemael</p>
+    <a href="mailto:cepag@ufpr.br" class="footer-link">
+        <i class="fas fa-envelope" id="icon"></i>
+        <span class="d-none d-xl-inline d-print-inline">cepag@ufpr.br</span>
+    </a>
+    <a href="tel:55 41 3361-3498" class="footer-link">
+        <i class="fas fa-phone" id="icon"></i>
+        <span class="d-none d-xl-inline d-print-inline">55 (41) 3361-3498</span>
+    </a>
+    <a href="https://www.facebook.com/cepagufpr/" target="_blank" class="footer-link facebook">
+        <i class="fa-brands fa-facebook" id="icon"></i>
+    </a>
+    <a href="https://www.instagram.com/cepag_ufpr" target="_blank" class="footer-link instagram">
+        <i class="fa-brands fa-instagram" id="icon"></i>
+    </a>
+</footer>
 
 </html>

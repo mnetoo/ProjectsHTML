@@ -70,13 +70,13 @@ main input, span {
 @media print {
     /* Redefinir margens para folha A4 padrão (210 x 297 mm) */
     @page {
-        margin: 0;        
+        margin: 0.5cm;
+        margin-left: 1cm;
+        margin-right: 1cm;
     }
     body{
       white-space: nowrap;
-      line-height: 1; 
       align-items: center;
-      font-size: 11pt;
     } 
     input.form-control{
       font-size: 10pt;
@@ -85,8 +85,12 @@ main input, span {
     .no-print {
         display: none; 
     }
-    form {
+    form{
+        grid-template-columns: auto 98vw auto !important; /* Divide o main em 3 colunas */
         row-gap: 1vh !important;
+        padding-top: 4vh !important;
+        line-height: 1;
+        font-size: 11pt;
     }
   }
 
@@ -144,9 +148,27 @@ main input, span {
     margin: 0 auto;
 }
 
+div.line {
+
+    margin-top: 50px;
+
+}
+
+.ass {
+
+    margin-bottom: 50px;
+
+}
+
 .botaoAzul{
     background-color: #4157a3 !important;
     color: white;
+}
+
+.botaoAzul:hover {
+
+    color: white;
+
 }
 
 /* Remover setas no Chrome, Safari, Edge e Opera */
@@ -164,3 +186,76 @@ input[type="number"]::-webkit-inner-spin-button {
   .inputButton{
     margin: 10 -1!important;
   }
+
+/*MODAL*/
+/* Estilo para a sobreposição que bloqueia a interação com a tela principal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semi-transparente */
+    z-index: 9998; /* Abaixo do modal, mas acima do restante da página */
+  }
+  
+  /* Estilo para o contêiner do modal */
+  .modal-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 20vw;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #c8c8c8;
+    border-radius: 15px;
+    z-index: 9999;
+  }
+  
+  /* Estilo para o título do modal */
+  .modal-title {
+    color: #212529;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para a mensagem do modal */
+  .modal-message {
+    color: #212529;
+    margin-top: 25px
+  }
+  
+  .modal-close-btn {
+    position: absolute; /* Para posicionar o botão */
+    top: 10px; /* Distância do topo */
+    right: 10px;
+    font-size: 30px;
+    color: gray;
+    border: none; /* Remover borda */
+    background: none; /* Remover fundo */
+    cursor: pointer; /* Mudar o cursor */
+  }
+  
+  .modal-close-btn:focus {
+    outline: none;
+  }
+  
+  /* Esconder o input de arquivo */
+.upload-txt input[type="file"] {
+    display: none;
+  }
+  
+  /* Botões de upload txt */
+  .upload-txt {
+    display: inline-block;
+    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+    padding: 6px 12px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    cursor: pointer;
+    align-content: center;
+  }
+  
+  

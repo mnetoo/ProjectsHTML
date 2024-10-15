@@ -1,0 +1,79 @@
+/*====== CABEÇALHO DA PÁGINA ======*/
+header div.container-fluid {
+  margin-left:2vw;
+  margin-right:2vw;
+}
+
+
+.header-text {
+  text-align: center;
+  margin: 0 20px;
+  flex: 1;
+}
+
+.navbar p {
+  margin-bottom: 0.5rem;
+}
+
+header img {
+  height: 10vh;
+}
+/* Estilos para celular (até 767px de largura) */
+@media (max-width: 767px) {
+  .header-text {
+    margin: 0;
+    font-size: 1.1vh;
+  }
+  header img {
+    height: 4.7vh;
+  }
+  header .navbar {
+    padding: 2vh 0.2vh;
+  }
+}
+/* Estilos para iPad/Tablet (largura mínima de 768px e largura máxima de 1200px)*/
+@media (min-width: 768px) and (max-width: 1200px) {
+  .header-text {
+    margin: 0;
+    font-size: 0.9vh;
+  }
+  header img {
+    height: 5.7vh;
+  }
+  header .navbar {
+    padding: 2vh;
+  }
+}
+
+/*============ MUDANÇA DE FONTE ============*/
+/* Estilo para a página */
+body, h1, h2, h3, h4, h5, h6, p, a, button, input, label, li, ul {
+  font-family: 'Poppins', sans-serif;
+}
+/* Estilo para o cabeçalho (header) */
+header {
+  font-family: 'Poppins', sans-serif;
+}
+/* Estilo para o rodapé (footer) */
+.footer-link {
+  font-family: 'Poppins', sans-serif;
+  color: inherit;
+  margin-right: 8vh;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*============ NAVBAR CABEÇALHO E RODAPÉ ============*/
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 7vh;
+  padding-right: 7vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+
+
+
