@@ -1,0 +1,52 @@
+/* header.css */
+
+header {
+    background-color: #f8f9fa;
+    display: grid;
+    grid-template-columns: 1fr 1fr 10fr 1fr;
+    column-gap: 2vh;
+    padding: 4vh 6rem;
+    align-items: center;
+    text-align: center;
+}
+
+header p{
+    margin: 0;
+}
+
+header img {
+    height: 10vh;
+}
+
+/* Regras para a página de impressão */
+@media print {
+    header {
+        column-gap: 2vh !important;
+        padding: 1vh 2rem !important;
+    }
+    header img {
+        height: 4vh !important;
+    }
+}
+
+/* Regras para celular (até 767px de largura) */
+@media screen and (max-width: 767px) {
+    header {
+        column-gap: 1vh;
+        font-size: 6px;
+        padding: 4vh 1rem;
+    }
+    header img {
+        height: 3vh !important;
+    }
+}
+/* Regras para iPad/Tablet (largura mínima de 768px e largura máxima de 1200px)*/
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    header {
+        font-size: 10px;
+        padding: 4vh 3rem;
+    }
+    header img {
+        height: 4vh !important;
+    }
+}

@@ -46,17 +46,17 @@
         <form id="form">
 
             <!-- Dados Relativos á Identificação -->
-            <section class="tabela duasColunas">
-                <div class="quatroColunas">
-                    <p class="titulo">Dados Relativos à Identifiação</p>
-                    <div class="linha branca">
-                        <p>Nome</p>
-                        <input class="form-control" type="text" name="nome" id="nome">
+                <section class="tabela duasColunas">
+                    <div class="quatroColunas">
+                        <p class="titulo">Dados Relativos à Identificação</p>
+                        <div class="linha branca">
+                            <p>Nome</p>
+                            <input class="form-control" type="text" name="nome" id="nome">
 
-                        <p>Data de Nascimento</p>
-                        <input class="form-control" type="date" id="dataNascimento" name="dataNascimento">
+                            <p>Data de Nascimento</p>
+                            <input class="form-control" type="date" id="dataNascimento" name="dataNascimento">
+                        </div>
                     </div>
-                </div>
 
                 <!-- RG - EXPEDIÇÃO - EMISSOR - CPF -->
                 <div class="tabela oitoColunas">
@@ -199,7 +199,6 @@
                     <div class="linha branca">
                         <p>Instituição de Ensino</p>
                         <select class="form-control" name="instituicao" id="instituicao"></select>
-                        <!-- <input class="form-control" type="text" name="instituicao" id="instituicao"> -->
                     </div>
                 </div>
 
@@ -311,6 +310,11 @@
             <section class="tabela" style="text-align:center; ">
                 <div class="line"></div>
                 <p class="ass">Assinatura</p>
+            </section>
+
+            <!-- AVISO IMPRESSÃO -->
+            <section class="tabela no-print" style="text-align:center; ">
+                <p style="color: red; font-size: 12px; font-weight: 700;">Para garantir uma impressão adequada, ajuste a escala para no máximo, 72%.</p>
             </section>
 
             <!-- IMPRESSÃO -->
