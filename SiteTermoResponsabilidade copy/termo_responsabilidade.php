@@ -141,20 +141,24 @@ include_once('cabecalho.php')
                     <p class="titulo">Estado do Equipamento</p>
                     <div class="linha branca">
                         <p>Grau de fragilidade ou perecibilidade do material</p>
-                        <div class="form-check form-check-inline" style="margin-top: 10px;">
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Alto" />
-                          <label class="form-check-label" for="inlineRadio1" >Alto</label>
+                        
+                        <div style="margin-top: 10px">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Alto" />
+                            <label class="form-check-label" for="inlineRadio1" >Alto</label>
+                          </div>
+
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Médio" />
+                            <label class="form-check-label" for="inlineRadio2" >Médio</label>
+                          </div>
+
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Baixo" />
+                            <label class="form-check-label" for="inlineRadio3">Baixo</label>
+                          </div>
                         </div>
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Médio" />
-                          <label class="form-check-label" for="inlineRadio2" >Médio</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Baixo" />
-                          <label class="form-check-label" for="inlineRadio3">Baixo</label>
-                        </div>
-  </div>
+                        
                     </div>
                 </div>
 
@@ -189,13 +193,15 @@ include_once('cabecalho.php')
                   <p class="ass">Nome Completo e Assinatura do Solicitante</p>
               </section>
 
+              <!-- AVISO IMPRESSÃO -->
+              <section class="tabela no-print" style="text-align:center; ">
+                  <p style="color: red; font-size: 12px; font-weight: 700;">Para garantir uma impressão adequada, ajuste a escala para no máximo, 72%.</p>
+              </section>
+
               <!-- IMPRESSÃO -->
-            <section class="tabela no-print" style="text-align:center; ">
+              <section class="tabela no-print" style="text-align:center; ">
                 <button type="button" class="btn btn-light botaoAzul" onclick="imprimirPagina()">Imprimir/Gerar PDF</button>
-
                 <button type="button" class="btn btn-light botaoAzul" onclick="submitForm()">Salvar Informações</button>
-
-
                 <label class="upload-txt inputButton botaoAzul" title="Carregar arquivo .txt">
                     <input type="file" name="arquivo" id="" onchange="readCSV(this)" accept=".csv" required>Carregar Informações
                 </label>

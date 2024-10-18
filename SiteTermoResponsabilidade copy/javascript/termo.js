@@ -43,7 +43,7 @@ function submitForm() {
         formValues[item.name] = item.value;
     });
 
-    csv += "Solicitante;Setor/Unidade;Telefone;Numero do Registro Patrimonial;Tipo do Equipamento;Marca e Modelo;Data de Retirada;Data de Devolucao;Objetivo de Uso;Local de Uso;Grau de Fragilidade;Estado do Equipamento; Descricao\n";
+    csv += "Solicitante;Setor;Telefone;Numero do Registro;Tipo do Equipamento;Marca e Modelo;Data de Retirada;Data de Devolucao;Objetivo de Uso;Local de Uso;Grau de Fragilidade;Estado do Equipamento;Descricao\n";
 
     csv += (formValues['solicitante'] || '') + ";";
     csv += (formValues['setor'] || '') + ";";
@@ -181,9 +181,9 @@ function readCSV(input) {
 
                 // Column indexes
                 var solicitante = headers.indexOf('Solicitante');
-                var setor = headers.indexOf('Setor/Unidade');
+                var setor = headers.indexOf('Setor');
                 var telefone = headers.indexOf('Telefone');
-                var num_registro = headers.indexOf('Numero de Registro Patrimonial');
+                var num_registro = headers.indexOf('Numero do Registro');
                 var tipo_equip = headers.indexOf('Tipo do Equipamento');
                 var marca_modelo = headers.indexOf('Marca e Modelo');
                 var data_retirada = headers.indexOf('Data de Retirada');
@@ -198,8 +198,8 @@ function readCSV(input) {
                 if (solicitante === -1 || setor === -1 || telefone === -1 || num_registro === -1 ||
                     tipo_equip === -1 || marca_modelo === -1 || data_retirada === -1 || data_devolucao === -1 ||
                     obj_uso === -1 || local_uso === -1 ||
-                    grau_fragilidade === -1 || estado_equip === -1 || campo_textarea === - 1
-                ) {
+                    grau_fragilidade === -1 || estado_equip === -1 || campo_textarea === -1) 
+                    {
                     showModal('Colunas necessárias não encontradas no arquivo .csv');
                     return;
                 }
@@ -208,7 +208,7 @@ function readCSV(input) {
                 var message = "Arquivo correto";
                 for (var i = 1; i < lines.length; i++) {
                     var data = lines[i].split(';');
-                    // Checks if the row has the expected number of columns
+                    // Checks if the row has the expecte number of columns
                     if (data.length < headers.length) {
                         console.warn(`Linha ${i + 1} ignorada: ${lines[i]}`);
                         continue; // Ignore lines with incomplete data
@@ -257,7 +257,6 @@ function readCSV(input) {
                     }
                     
 
-                    // Preencher textarea
                     document.getElementById('textarea').value = data[campo_textarea];
                 }
 
@@ -286,4 +285,4 @@ function readCSV(input) {
     }
 }
 
-// ==========================================================================================
+// ==========================================================================================d

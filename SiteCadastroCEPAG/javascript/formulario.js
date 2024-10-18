@@ -351,16 +351,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // ==========================================================================================
 
-//Chama o JSON para opções de universidades
-
-fetch('../json/instituicoes.json')
+// Chama o JSON para opções de universidades
+fetch('../json/ies.json')
     .then(response => response.json())
     .then(data => {
         const select = document.getElementById('instituicao');
         data.forEach(instituicao => {
             const option = document.createElement('option');
-            option.value = instituicao;
-            option.textContent = instituicao;
+            option.value = instituicao.id;  // Define o valor do campo option com o ID
+            option.textContent = instituicao.ies_razaosocial;  // Exibe o nome da instituição
             select.appendChild(option);
         });
     })
